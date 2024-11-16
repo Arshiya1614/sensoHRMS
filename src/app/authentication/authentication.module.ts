@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { AuthenticationLayoutComponent } from './authentication-layout/authentication-layout.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -11,6 +11,10 @@ import { MailSendComponent } from './login-component/mail-send/mail-send.compone
 import { RegVerifyComponent } from './login-component/reg-verify/reg-verify.component';
 import { SendVerifyComponent } from './login-component/send-verify/send-verify.component';
 import { VerifyUserComponent } from './login-component/verify-user/verify-user.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -27,7 +31,12 @@ import { VerifyUserComponent } from './login-component/verify-user/verify-user.c
   ],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class AuthenticationModule { }
