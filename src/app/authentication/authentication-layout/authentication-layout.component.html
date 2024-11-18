@@ -1,21 +1,12 @@
-<div class="img">
-  <div class="container-fluid ">
-    <div class="row layout d-flex justify-content-center align-items-center ">
-      <div class="col-lg-6 col-md-6 mb-2" *ngIf="showLogoAndText">
-        <img src='../../../assets/favicon.ico' class="img-fluid">
-        <div class="h2 mb-4">SenseLive</div>
-        <div class="inside-container">
-          <div class="row">
-            <div class="col-12 mb-3">
-              <div class="text">SenseLive opens the window to discover and unlock hidden potential in your factory through
-                cutting-edge Industry 4.0 solutions, transforming it into a smart facility with a simple click.</div>
-            </div>
-          </div>
+<div class="auth-container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center align-items-center">
+        <div class="img-container">
+          <img src="assets/hrms3.webp" alt="hrms-logo" class="img">
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 mb-2 pl-4">
-        <router-outlet></router-outlet>
+      <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center align-items-center">
+            <router-outlet></router-outlet> 
       </div>
     </div>
-  </div>
 </div>

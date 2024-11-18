@@ -1,50 +1,43 @@
-.login{
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: rgba(255, 255, 255, 0.399); */
-  box-shadow: 0px 15px 60px #c7112e;
-  outline: 1px solid #640918;
-  background-color: #161616;
-  padding: 50px;
-  width: 60%;
+.card-container{
+  
+  margin: 0 auto;
+  height: 100%;
+ 
+}
+
+.card {
+  display: block;
+  width: 90%;
+  background-color: white;
   border-radius: 5px;
-}
-.sense-live-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-.sense-live-img {
-  height: 80px; 
-  width: 80px;
-  margin-right: 10px; 
+  box-shadow: 0px 15px 60px rgb(130, 166, 198);
+  padding: 40px;
+  box-sizing: border-box; 
+  margin: 0 auto;
+  height: 100%;
 }
 
-.h2 {
-  line-height: 80px;
-  font-size:2rem;
-  padding: 0;
-  margin: 0; 
-  color: white;
+.card-content{
+  padding: 20px;
 }
 
 .h3{
   font-size: 1.2rem;
   font-weight: 550;
-  color: white;
+  text-align: center;
 }
 
 label {
   font-size: 1rem;
   padding-bottom: 5px;
   font-weight: 550;
-  color: white;
+  color: black;
   margin-top: 15px;
 }
 
 label::first-letter {
   text-decoration: underline;
-  color: #c7112e;
+  color: rgb(60, 60, 117);
   font-size: 1.2rem;
 }
 
@@ -62,7 +55,7 @@ input {
 }
 
 input:focus {
-  border-bottom: 2px solid #c7112e; 
+  border-bottom: 2px solid rgb(60, 60, 117); 
   background-color: transparent; 
   color: white;
 }
@@ -98,14 +91,14 @@ a{
 }
 
 .sign-in {
-  background-color:#161616; 
-  color: #c7112e;               
-  border: 2px solid #c7112e;
+  background-color:rgb(60, 60, 117); 
+  color: white;               
+  border: 2px solid white;
 }
 .sign-up {
-  background-color: #c7112e;    
-  color: 161616;             
-  border: 2px solid #161616;  
+  background-color: white;    
+  color: rgb(60, 60, 117);             
+  border: 2px solid rgb(60, 60, 117);  
 }
 .eye-icon {
   position: absolute;
@@ -113,48 +106,14 @@ a{
   top: 40%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #c7112e; 
+  color: rgb(60, 60, 117); 
 }
 .valid-icon {
   position: absolute;
   right: 10px; 
   top: 40%;
   transform: translateY(-50%);
-  color: #c7112e; 
+  color: rgb(60, 60, 117); 
 }
 
-@media (max-width: 1024px) { 
-  .login{
-    padding: 20px;
-  }
-  .h2{
-    /* font-size: 1.5rem; */
-    color: white;
-  }
 
-}
-@media (min-width : 768px)
-{
-  .sense-live-wrapper {
-    display: none;
-  }
-
-  .sense-live-img {
-    display: none;
-  }
-
-  .h2 {
-    display: none;
-  }
-}
-@media (max-width: 768px)
- {
-
-  .login{
-    width: 90%;
-  }
-  .sense-live-wrapper {
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-}
