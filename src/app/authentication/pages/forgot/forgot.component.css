@@ -1,18 +1,17 @@
-.card-container{
+/* .card-container{
   margin: 0 auto;
   height: 100%;
-}
+} */
 
 .card {
   display: block;
-  width: 90%;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 15px 60px rgb(130, 166, 198);
-  padding: 40px;
   box-sizing: border-box; 
-  margin: 0 auto;
+  margin: 0 40px;
   height: 100%;
+  padding: 10px;
 }
 
 .card-content{

@@ -1,20 +1,18 @@
-.card-container{
-  
-    margin: 0 auto;
-    height: 100%;
-   
-  }
+/* .card-container{
+  margin: 0 auto;
+  height: 100%;
+} */
   
   .card {
     display: block;
-    width: 90%;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 15px 60px rgb(130, 166, 198);
-    padding: 40px;
     box-sizing: border-box; 
     margin: 0 auto;
     height: 100%;
+    padding: 10px;
+
   }
   
   .card-content{
@@ -34,6 +32,17 @@
     color: black;
     margin-top: 15px;
   }
+  h4{
+    color: black;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  
+  h4::first-letter{
+    text-decoration: underline;
+    color: rgb(60, 60, 117);
+    font-size: 1.2rem;
+  }
   
   label::first-letter {
     text-decoration: underline;
@@ -45,11 +54,11 @@
     padding: 10px;
     font-size: 14px;
     border: none;
-    border-bottom: 2px solid #c7112e; 
+    border-bottom: 2px solid rgb(60, 60, 117); 
     border-radius: 0; 
     outline: none;
     width: 100%;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #5d5858a2;
     background-color: transparent;
     color: white;
   }
@@ -61,7 +70,7 @@
   }
   
   input::placeholder {
-    color: #dddddda2; 
+    color: #5d5858a2; 
   }
   
   input:hover {
@@ -102,7 +111,7 @@
   }
   .eye-icon {
     position: absolute;
-    right: 10px; 
+    right: 15px; 
     top: 40%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -110,7 +119,7 @@
   }
   .valid-icon {
     position: absolute;
-    right: 10px; 
+    right: 15px; 
     top: 40%;
     transform: translateY(-50%);
     color: rgb(60, 60, 117); 
