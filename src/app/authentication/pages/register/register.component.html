@@ -1,1 +1,90 @@
-<p>register works!</p>
+<div class="card-container">
+    <div class="card">
+  <div class="card-content">
+    <div class="row mb-3">
+        <div class="col-12">
+          <div class="h3 text-center">Register your Account</div>
+        </div>
+      </div>
+      <div class="row">
+        <form>
+          <div class="col-12">
+            <h4>Company Details</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12  mb-3">
+              <input type="text" id="companyName" placeholder="Enter company name" [formControl]="CompanyName" required>
+              <mat-error *ngIf="CompanyEmail.invalid && CompanyEmail.touched">{{getCompanyNameErrorMessage()}}</mat-error>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+              <input type="email" id="companyEmail" placeholder="Enter company email" [formControl]="CompanyEmail" required>
+              <mat-error *ngIf="CompanyEmail.invalid && CompanyEmail.touched">{{getCompanyEmailErrorMessage()}}</mat-error>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3">
+              <input type="text" id="contact" placeholder="Enter contact number" [formControl]="ContactNo" required>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3">
+              <input type="text" id="location" placeholder="Enter company location" [formControl]="location" required>
+            </div>
+          </div>
+          <div class="col-12">
+            <h4>Personal Details</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3">
+              <input type="text" id="firstName" placeholder="Enter your first name" [formControl]="FirstName" required>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3">
+              <input type="text" id="lastName" placeholder="Enter your last name" [formControl]="LastName" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3">
+              <input type="email" id="personalEmail" placeholder="Enter your personal email" [formControl]="PersonalEmail"
+                required>
+              <mat-error
+                *ngIf="PersonalEmail.invalid  && PersonalEmail.touched">{{getPersonalEmailErrorMessage()}}</mat-error>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3">
+              <input type="text" id="designation" placeholder="Enter your designation" [formControl]="Designation" required>
+            </div>
+          </div>
+          <div class="col-12">
+            <h4>Set Password</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3 position-relative">
+              <input matInput [type]="hidePassword ? 'password' : 'text'" [formControl]="Password"
+                placeholder="Enter your password">
+              <mat-icon *ngIf="Password.value" class="eye-icon" (click)="hidePassword = !hidePassword">
+                {{ hidePassword ? 'visibility_off' : 'visibility' }}
+              </mat-icon>
+              <mat-error *ngIf="Password.invalid && Password.touched">{{getPasswordErrorMessage()}}</mat-error>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mb-3 position-relative">
+              <input matInput [type]="hideConfirmPassword ? 'password' : 'text'" [formControl]="confirmPassword" 
+                placeholder="Enter your password">
+              <mat-icon *ngIf="confirmPassword.value" class="eye-icon" (click)="hideConfirmPassword = !hideConfirmPassword">
+                {{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}
+              </mat-icon>
+              <mat-error
+                *ngIf="confirmPassword.invalid && confirmPassword.touched">{{getConfirmPasswordErrorMessage()}}</mat-error>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+              <button type="submit" class="sign-in btn w-100" [routerLink]="['/authentication/login']">Sign In</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+              <button type="button" class="sign-up btn  w-100" (click)="submit()" [disabled]="loading">Sign Up</button>
+            </div>
+          </div>
+    
+        </form>
+      </div>
+  </div>
+    </div>
+</div>
