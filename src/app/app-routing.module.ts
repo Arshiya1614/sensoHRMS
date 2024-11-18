@@ -5,19 +5,18 @@ import { AuthenticationLayoutComponent } from './authentication/authentication-l
 const routes: Routes = [
   {
     path: 'authentication',
-    component :AuthenticationLayoutComponent,
-    children : [
-      {
-        path:'',loadChildren: () =>
-          import('./authentication/authentication.module').then(m => m.AuthenticationModule)
-      }
-    ]
-    
-  }
+    component: AuthenticationLayoutComponent,
+    loadChildren: () =>
+      import('./authentication/authentication.module').then(m => m.AuthenticationModule),
+  },
+  {
+    path: '**', // Fallback route
+    redirectTo: 'authentication', // Or your preferred default path
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
