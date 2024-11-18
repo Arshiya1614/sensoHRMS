@@ -1,1 +1,42 @@
-<p>reset-pwd works!</p>
+<div class="card-container">
+  <div class="card">
+    <div class="card-content">
+      <div class="row mb-2">
+        <div class="col-12 ">
+          <div class="h3 text-center">Reset Your Password</div>
+        </div>
+      </div>
+    </div> <div class="row">
+    <form>
+      <div class="col-12">
+        <label for="email">Enter your password</label>
+      </div>
+      <div class="col-12 position-relative">
+        <input  placeholder="enter new password" matInput [type]="hidePassword ? 'password' : 'text'" [formControl]="password">
+        <mat-icon *ngIf="password.value"  class="eye-icon" (click)="hidePassword = !hidePassword">
+          {{ hidePassword ? 'visibility_off' : 'visibility' }}
+        </mat-icon>
+        <mat-error *ngIf="password.invalid && password.touched">{{getPasswordErrorMessage()}}</mat-error>
+      </div>
+      <div class="col-12">
+        <label for="password">Confirm password</label>
+      </div>
+      <div class="col-12 position-relative">
+        <input placeholder="renter new password" matInput [type]="hideConfirmPassword ? 'password' : 'text'" [formControl]="confirmPassword">
+        <mat-icon *ngIf="confirmPassword.value" class="eye-icon" (click)="hideConfirmPassword = !hideConfirmPassword">
+          {{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}
+        </mat-icon>
+        <mat-error *ngIf="confirmPassword.invalid && confirmPassword.touched">{{getConfirmPasswordErrorMessage()}}</mat-error>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mb-2">
+          <button class="btn" (click)="submit()">Update Password</button>
+        </div>
+        <div class="col-12 mt-3 text-center">
+          <a routerLink="/authentication/login" class="text-center ">Remember password ? Sign In</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>

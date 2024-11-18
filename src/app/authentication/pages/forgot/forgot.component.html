@@ -1,1 +1,31 @@
-<p>forgot works!</p>
+<div class="card-container">
+  <div class="card">
+    <div class="card-content">
+      <div class="row mb-2">
+        <div class="col-12">
+          <div class="h3 text-center">Forgot password</div>
+        </div>
+      </div>
+      <div class="row">
+        <form>
+          <div class="col-12">
+            <label for="email"> Email</label>
+          </div>
+          <div class="col-12">
+            <input type="email" id="email" placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid && email.touched">{{getErrorMessage()}}</mat-error>
+          </div>
+          <div class="row">
+            <div class=" col-12 
+            text-center mb-2">
+              <button type="submit" (click)="submit()" class="submit" [disabled]="loading">{{loadingMessage}}</button>
+            </div>
+            <div class="col-12 mt-3 text-center">
+              <a routerLink="/authentication/login" class="text-center mt-5">Remember password ? Sign in</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

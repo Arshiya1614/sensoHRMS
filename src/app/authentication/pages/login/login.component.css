@@ -45,11 +45,11 @@ input {
   padding: 10px;
   font-size: 14px;
   border: none;
-  border-bottom: 2px solid #c7112e; 
+  border-bottom: 2px solid rgb(60, 60, 117); 
   border-radius: 0; 
   outline: none;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #5d5858a2;
   background-color: transparent;
   color: white;
 }
@@ -61,7 +61,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: #dddddda2; 
+  color: #5d5858a2; 
 }
 
 input:hover {
